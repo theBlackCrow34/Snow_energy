@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "323482843462",
+    "firebase_url": "https://snowenergy.firebaseio.com",
+    "project_id": "snowenergy",
+    "storage_bucket": "snowenergy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323482843462:android:fa2cf4f6768cf24f10cd47",
+        "android_client_info": {
+          "package_name": "com.sale.refaq.snow_energy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323482843462-q2l5pbuqjc9qokgeauiufd1pkv6j12v0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sale.refaq.snow_energy",
+            "certificate_hash": "024784697087337877c4d18c1ef0f5743b2fdb2d"
+          }
+        },
+        {
+          "client_id": "323482843462-k8ede6abudqtsltsbvsr8kja57qed1pc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLkZwlF6pzU-iozfa1ydgZKucjfBxXHEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323482843462-k8ede6abudqtsltsbvsr8kja57qed1pc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

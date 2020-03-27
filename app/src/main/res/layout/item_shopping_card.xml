@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:src="@drawable/ic_delete_black_24dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/deleteAll"
+            android:background="@color/colorPrimary"
+            android:padding="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <ImageButton
+            android:id="@+id/shopping_card_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:src="@drawable/ic_close_black_24dp"
+            app:layout_constraintEnd_toStartOf="@+id/shopping_card_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/shopping_card_image"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/home_illustration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="اسم افتراضي للمنتج"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/shopping_card_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_card_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="00.00 ريال"
+            android:textColor="@color/dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/shopping_card_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopping_card_name" />
+
+        <TextView
+            android:id="@+id/shopping_card_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اسم الشركة"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toStartOf="@id/shopping_card_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopping_card_price" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/shopping_card_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopping_card_company_name">
+
+            <ImageButton
+                android:id="@+id/shopping_card_add_number"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_rad_left"
+                android:src="@drawable/ic_add_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shopping_card_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/shopping_card_remove_number"
+                app:layout_constraintStart_toEndOf="@+id/shopping_card_add_number"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/shopping_card_remove_number"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_rad_right"
+                android:src="@drawable/ic_remove_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كرتونة"
+            android:layout_margin="10dp"
+            android:textColor="@color/dark"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

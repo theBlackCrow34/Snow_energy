@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DeliveryAddressDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/shopping_card_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/delivery_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_forward_black_24dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="يشحن إلى"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="المستلم"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopping_card_app_bar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/ic_perm_identity_black_24dp"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الاسم"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_user">
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/ccp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:counterEnabled="true"
+                app:endIconDrawable="@drawable/ic_phone_black_24dp"
+                app:endIconMode="custom"
+                app:helperText="أدخل رقم الهاتف بدون مفتاح الدولة"
+                app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneNumberInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهاتف"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="العنوان"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t2_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:baselineAligned="true"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/ic_location_on_black_24dp"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="المدينة"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t3_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:baselineAligned="true"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/ic_location_on_black_24dp"
+            app:endIconMode="custom"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t2_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/area"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="المنطقة"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t4_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:baselineAligned="true"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/ic_location_on_black_24dp"
+            app:endIconMode="custom"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t3_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/district_street"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:hint="الشارع أو الحي"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layoutDirection="ltr"
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t4_user">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t6_user"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:baselineAligned="true"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الطابق"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/t5_user"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                android:baselineAligned="true"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:endIconDrawable="@drawable/ic_location_on_black_24dp"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="المبنى أو العمارة"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:background="@drawable/text_border"
+            android:drawableRight="@drawable/ic_location_on_black_24dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/current_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="موقعك على الخريطة"
+            android:textSize="18sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_curve_dark"
+            android:text="متابعة"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

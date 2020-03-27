@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.PayedWayActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/shopping_card_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/pay_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <ImageView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="إختر طريقة الدفع"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:outlineSpotShadowColor="@color/gray"
+            app:cardCornerRadius="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopping_card_app_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layoutDirection="ltr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:checked="true"
+                        android:textSize="18sp"
+                        android:id="@+id/pay_when_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="الدفع عند الإستلام"
+                        android:textDirection="rtl" />
+
+
+                    <RadioButton
+                        android:textSize="18sp"
+                        android:id="@+id/pay_online"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="بطاقة مدى"
+                        android:textDirection="rtl" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="المبلغ الإجمالي 9,218.00 ريال"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4"
+            android:layout_margin="20dp" />
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/confirm_pay_way"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_curve_dark"
+            android:text="تأكيد الطلب"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

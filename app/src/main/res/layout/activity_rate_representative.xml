@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        tools:context=".ui.RateRepresentativeActivity"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layoutDirection="ltr"
+            android:paddingBottom="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="match_parent"
+            >
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/shopping_card_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/pay_tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+                    <ImageView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="أضف تقييمك"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="اسم المنتج"
+                android:textColor="@android:color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shopping_card_app_bar" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:numStars="5"
+                android:saveEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="أضف تعلقك أو رأيك"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shape_curve_dark"
+                android:text="حفظ"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="19sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

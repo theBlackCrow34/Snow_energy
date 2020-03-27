@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.CompanyItemsActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/company_items_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/company_items_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/company_name"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:text="اسم الشركة"/>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/company_items_app_bar"
+            android:id="@+id/activity_company_items_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sale.refaq.snow_energy">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.SendComplaint"></activity>
+        <activity android:name=".ui.SendSuggestion" />
+        <activity android:name=".ui.RateItemActivity" />
+        <activity android:name=".ui.RateRepresentativeActivity" />
+        <activity android:name=".ui.EditPasswordActivity" />
+        <activity android:name=".ui.EditDataActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity android:name=".ui.MapActivity" />
+        <activity android:name=".ui.ConfirmRequstActivity" />
+        <activity android:name=".ui.PayedWayActivity" />
+        <activity android:name=".ui.DeliveryAllDetailsActivity" />
+        <activity android:name=".ui.DeliveryAddressDetailsActivity" />
+        <activity android:name=".ui.ItemDetailActivity" />
+        <activity android:name=".ui.CompanyItemsActivity" />
+        <activity android:name=".ui.ShoppingCartActivity" />
+        <activity android:name=".ui.MainViewActivity" />
+        <activity android:name=".ui.inti.ForgetPasswordActivity" />
+        <activity android:name=".ui.inti.RegisterDataActivity" />
+        <activity android:name=".ui.inti.VerifySmsActivity" />
+        <activity android:name=".ui.inti.PhoneNumberActivity" />
+        <activity android:name=".ui.inti.LoginActivity" />
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.main.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

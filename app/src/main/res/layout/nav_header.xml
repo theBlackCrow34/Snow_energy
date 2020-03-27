@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="passedNavHeader"
+            type="String"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layoutDirection="ltr"
+        android:background="@android:color/holo_red_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/nav_header_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/home_illustration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="ِAhmed Ali"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/nav_header_image"
+            app:layout_constraintTop_toTopOf="@+id/nav_header_image" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/header_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_edit_black_24dp"
+            android:text="تعديل بياناتي"
+            android:textColor="#FFEB3B"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/nav_header_image"
+            app:layout_constraintTop_toBottomOf="@+id/header_name" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nav_header_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

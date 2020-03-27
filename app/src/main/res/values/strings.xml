@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Snow_energy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="openNavDrawer">Navigation Drawer Open</string>
+    <string name="closeNavDrawer">Navigation Drawer close</string>
+    <string name="map_key" translatable="false">
+        AIzaSyAQN15uS81eYWcf1L9Rqu7nJ7DtBu7Pkxo
+    </string>
+    <string name="contact_us_t_toolbar">اتصل بنا</string>
+    <string name="contact_us_f_title">مرحبا بك هذه بيانات \n التواصل معنا</string>
+    <string name="contact_us_s_title">رقم الهاتف</string>
+    <string name="contact_us_nu">+201123304107</string>
+    <string name="contact_us_th_title">البريد الالكتروني</string>
+    <string name="contact_us_em">sherifaboz43@gmail.com</string>
+    <string name="contact_us_fo_title">تابعونا على</string>
+    <string name="contact_us_send_sug">إرسال مقترح</string>
+    <string name="contact_us_send_complaint">إرسال شكوى</string>
+    <string name="send">ارسال</string>
+    <string name="invalid_phone_number">تأكد من الرقم الذي أدخلته</string>
+    <string name="write_verification_code">أكتب الكود</string>
+</resources>
